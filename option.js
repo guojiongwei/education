@@ -16,13 +16,13 @@ app.all('*', function(req, res, next) {
   next();
 });
 // http://bj.dingfengzhuanli.com/api/baojian/upload
-app.use('/api', proxy({
-  target: 'http://bj.dingfengzhuanli.com',
-  // pathRewrite: {'^/api' : '/'},
-  changeOrigin: true
-}))
+// app.use('/api', proxy({
+//   target: 'http://bj.dingfengzhuanli.com',
+//   // pathRewrite: {'^/api' : '/'},
+//   changeOrigin: true
+// }))
 app.use(history());
-app.use(express.static('./'));
+app.use(express.static('./dist'));
 // 监听端口
 app.listen('4001','0.0.0.0', () => {
  console.log(`server running localhost:4001`);
