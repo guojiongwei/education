@@ -16,7 +16,7 @@
             console.log(e.data);
             localStorage.setItem('task',e.data);
 
-            window.parent.postMessage('finished', '我是iframe1发送给主窗口的消息');  
+            window.parent.postMessage('finished', '*');  
         }, false);
         console.log(localStorage)
     </script>
