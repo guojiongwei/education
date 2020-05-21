@@ -1,17 +1,27 @@
-<!DOCTYPE html><html lang=en><head><meta charset=UTF-8><title>入口</title><link href=css/chunk-common.47e39147.css rel=preload as=style><link href=css/chunk-vendors.32e54ed6.css rel=preload as=style><link href=js/chunk-common.2e27ab7b.js rel=preload as=script><link href=js/chunk-vendors.8f3580a2.js rel=preload as=script><link href=js/index.9dea267c.js rel=preload as=script><link href=css/chunk-vendors.32e54ed6.css rel=stylesheet><link href=css/chunk-common.47e39147.css rel=stylesheet></head><body><div id=app></div><script>function isMobile() {
-      var userAgenInfo = navigator.userAgent
-      var Agents = new Array('Android', 'iPhone', 'SymbianOS', 'iPad', 'iPod')
-      var flag = false
-      for (var v = 0; v < Agents.length; v++) {
-        if (userAgenInfo.indexOf(Agents[v]) > 0) {
-          flag = true
-          break
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cross domain</title>
+</head>
+<body>
+    <h2>Status</h2>
+    <p></p>
+    <a href="http://test.guojiongwei.top">去查看结果</a>
+    <iframe src="http://iframe1.guojiongwei.top" frameborder="0"></iframe>
+    <iframe src="http://iframe2.guojiongwei.top" frameborder="0"></iframe>
+    <script>
+      localStorage.setItem('aaaa', 2222)
+        window.onload = function(){
+            //在页面加载完成后主页面向iframe发送请求
+            window.frames[0].postMessage('jogging, reading and writing','http://iframe1.guojiongwei.top');
         }
-      }
-      return flag
-    }
-    if (isMobile()) {
-      window.location.href = '/web-test/m.html#/'
-    } else {
-      window.location.href = '/web-test/c.html#/'
-    }</script><script src=js/chunk-vendors.8f3580a2.js></script><script src=js/chunk-common.2e27ab7b.js></script><script src=js/index.9dea267c.js></script></body></html>
+
+        // 主页面监听message事件,
+        window.addEventListener('message', function(e){
+            var data = e.data;
+            document.querySelector('p').innerHTML = data;
+        }, false);
+    </script>
+</body>
+</html>
