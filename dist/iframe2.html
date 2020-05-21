@@ -8,7 +8,6 @@
   <h2>iframe2</h2>
     <script>
       localStorage.setItem('iframe2', 'iframe2')
-      console.log(localStorage)
         //iframe接收消息，并把当前颜色发送给主页面  
         window.addEventListener('message', function(e) {  
             if (e.source != window.parent)   
@@ -18,7 +17,6 @@
 
             window.parent.postMessage('finished', '*');  
         }, false);
-      console.log(top)
     </script>
 </body>
 </html>
