@@ -11,7 +11,7 @@
     <iframe src="http://iframe1.guojiongwei.top" frameborder="0"></iframe>
     <script>
       document.domain = 'guojiongwei.top'
-      localStorage.setItem('aaaa', 2222)
+      localStorage.setItem('hoongmei', '我是父窗口的localStorage')
         window.onload = function(){
             //在页面加载完成后主页面向iframe发送请求
             window.frames[1].postMessage('我是主窗口发送给iframe1的消息','http://iframe1.guojiongwei.top');
