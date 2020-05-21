@@ -7,15 +7,14 @@
 <body>
     <h2>Status</h2>
     <p></p>
-    <a href="http://test.guojiongwei.top">去查看结果</a>
     <iframe src="http://iframe1.guojiongwei.top" frameborder="0"></iframe>
     <iframe src="http://iframe2.guojiongwei.top" frameborder="0"></iframe>
     <script>
       localStorage.setItem('aaaa', 2222)
         window.onload = function(){
             //在页面加载完成后主页面向iframe发送请求
-            window.frames[0].postMessage('我是发送给iframe1的消息','http://iframe1.guojiongwei.top');
-            window.frames[1].postMessage('我是发送给iframe2的消息','http://iframe2.guojiongwei.top');
+            window.frames[0].postMessage('我是主窗口发送给iframe1的消息','http://iframe1.guojiongwei.top');
+            window.frames[1].postMessage('我是主窗口发送给iframe2的消息','http://iframe2.guojiongwei.top');
         }
 
         // 主页面监听message事件,
