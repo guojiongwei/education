@@ -7,6 +7,7 @@
 <body>
   <h2>iframe1</h2>
     <script>
+      document.domain = 'hongmei.guojiongwei.top'
       localStorage.setItem('iframe1', 'iframe1')
         //iframe接收消息，并把当前颜色发送给主页面  
         window.addEventListener('message', function(e) {  
@@ -15,8 +16,9 @@
             console.log(e.data);
             localStorage.setItem('task',e.data);
 
-            window.parent.postMessage('finished', '*');  
+            window.parent.postMessage('finished', '我是iframe1发送给主窗口的消息');  
         }, false);
+        console.log(localStorage)
     </script>
 </body>
 </html>
