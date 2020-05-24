@@ -26,7 +26,7 @@ app.get('/getVersion', (req, res) => {
     code: 200,
     msg: '请求成功',
     data: {
-      version: '1.0.5'
+      version: '1.0.6'
     }
   })
 })
