@@ -21,6 +21,15 @@ app.all('*', function(req, res, next) {
 //   // pathRewrite: {'^/api' : '/'},
 //   changeOrigin: true
 // }))
+app.get('/getVersion', (req, res) => {
+  res.send({
+    code: 200,
+    msg: '请求成功',
+    data: {
+      version: '1.0.3'
+    }
+  })
+})
 app.use(history());
 app.use(express.static('./dist'));
 // 监听端口
