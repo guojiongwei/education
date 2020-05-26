@@ -7,11 +7,21 @@
 </head>
 <body>
   <script>
-    fetch('http://hongmei.guojiongwei.top/app.asar').then(res => res.text()).then(res => {
-      console.log(res)
-      let objectURL = window.URL.createObjectURL(res);
-      console.log(objectURL)
-    })
+    var url = './dist/aaaa.xlsx';
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.responseType = "blob";
+        xhr.onload = function(e) {
+          console.log(this.response)
+          let url = window.URL.createObjectURL(new Blob([this.response]))
+          let link = document.createElement('a')
+          link.style.display = 'none'
+          link.href = url
+          link.setAttribute('download', 'aaa.xlsx')
+          document.body.appendChild(link)
+          link.click()
+        }
+        xhr.send();
   </script>
 </body>
 </html>
