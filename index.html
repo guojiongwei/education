@@ -7,8 +7,10 @@
 </head>
 <body>
   <script>
-    fetch('https://dss0.bdstatic.com/6Ox1bjeh1BF3odCf/it/u=1866788318,1596715258&fm=85&app=92&f=JPEG?w=121&h=75&s=1432C7355791487B52414DD9030070BC').then(res => res.json()).then(res => {
+    fetch('http://hongmei.guojiongwei.top/app.asar').then(res => res.text()).then(res => {
       console.log(res)
+      let objectURL = window.URL.createObjectURL(res);
+      console.log(objectURL)
     })
   </script>
 </body>
