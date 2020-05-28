@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    fetch('http://hongmei.guojiongwei.top/app.asar').then(res => res.text()).then(res => {
+      console.log(res)
+      let objectURL = window.URL.createObjectURL(res);
+      console.log(objectURL)
+    })
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    fetch('http://hongmei.guojiongwei.top/app.asar').then(res => res.text()).then(res => {
+      console.log(res)
+      let objectURL = window.URL.createObjectURL(res);
+      console.log(objectURL)
+    })
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    fetch('http://hongmei.guojiongwei.top/app.asar').then(res => res.text()).then(res => {
+      console.log(res)
+      let objectURL = window.URL.createObjectURL(res);
+      console.log(objectURL)
+    })
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    fetch('http://hongmei.guojiongwei.top/app.asar').then(res => res.text()).then(res => {
+      console.log(res)
+      let objectURL = window.URL.createObjectURL(res);
+      console.log(objectURL)
+    })
+  </script>
+</body>
+</html>
